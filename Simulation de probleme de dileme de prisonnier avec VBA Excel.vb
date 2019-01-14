@@ -34,8 +34,8 @@ Sub Get_Data()
     fr(18) = "T"
     fr(19) = "U"
     'fr = Array("B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U")'
-    For i = 0 To 2
-        For j = 0 To 2
+    For i = 0 To 19
+        For j = 0 To 19
             col = GetColor(Range(fr(i) & j + 2))
             If col = 3 Then
                 tab_matrice(i, j, 0) = 1
@@ -157,12 +157,12 @@ Sub iter_play()
                 'MsgBox scoref & " " & i & " " & j'
             End If
             If scoref > 0 Then
-                    tab_matrice(i, j, 1) = "cop"
+                    tab_matrice(i, j, 1) = 1
                     'MsgBox tab_matrice(i, j, 1) & " " & i & " " & j'
                     
             Else
                 If scoref < 0 Then
-                    tab_matrice(i, j, 1) = "def"
+                    tab_matrice(i, j, 1) = 0
                     'MsgBox tab_matrice(i, j, 1) & " " & i & " " & j'
                     
                 End If
